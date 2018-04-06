@@ -15,7 +15,7 @@ class AddImageColumn extends Migration
     {
 
     Schema::table('users', function($table) {
-        $table->string('avatar_link');
+        $table->string('avatar_link')->nullable();
     });
 
     }
@@ -29,7 +29,7 @@ class AddImageColumn extends Migration
     {
      
     Schema::table('users', function($table) {
-        $table->dropColumn('avatar_link')->nullable();
+        $table->dropColumn('avatar_link');
     });
 
     }
